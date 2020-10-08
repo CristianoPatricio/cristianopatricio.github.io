@@ -35,12 +35,12 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-Graduated in Computer Science and Engineering.
-I'm a Master's degree student in Computer Science and Engineering at UBI, Portugal.
-Currently, I'm doing my master's thesis in the field of Artificial Intelligence.
-I'm an organized, methodical, responsible, creative and applied person.
-I write about my course in my personal blog «Vida de um Estudante de Engenharia Informática».
-Main interests: Artificial Intelligence, Machine Learning, Robotics, Algorithms, Systems Architecture & Design.
+    Graduated in Computer Science and Engineering.
+    I'm a Master's degree student in Computer Science and Engineering at UBI, Portugal.
+    Currently, I'm doing my master's thesis in the field of Artificial Intelligence.
+    I'm an organized, methodical, responsible, creative and applied person.
+    I write about my course in my personal blog «Vida de um Estudante de Engenharia Informática».
+    Main interests: Artificial Intelligence, Machine Learning, Robotics, Algorithms, Systems Architecture & Design.
 
 # Projects Section
 # projects_title: Projects #(Use this to override about projects section title)
