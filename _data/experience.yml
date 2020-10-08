@@ -1,10 +1,16 @@
 # Experience template
 - layout: left
-  company: Company name
-  link: Link to company (optional)
-  job_title: Job title
-  dates: Date Range (eg. November 2016 - present)
-  quote: >
-   Short description of the company (optional)
+  company: NOVA LINCS-UBI
+  link: https://www.ubi.pt/Entidade/nova_lincs
+  job_title: Researcher
+  dates: October 2020 - present
   description: | # this will include new lines to allow paragraphs
-    Description of role
+    Conducting my Master's Thesis in the field of Artificial Intelligence.
+    
+- layout: left
+  company: MagicKey
+  link: http://www.magickey.ipg.pt/
+  job_title: Web Developer
+  dates: December 2018 - July 2019
+  description: | # this will include new lines to allow paragraphs
+    Design and development of a AAC web application – MagicContact Web, as the final course project to obtain the title of Bachelors in Computer Science and Engineering.
