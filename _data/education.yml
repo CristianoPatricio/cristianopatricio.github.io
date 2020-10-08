@@ -1,9 +1,15 @@
 # Education Template
 - layout: left
-  name: Institution name
-  dates: Date Range (eg. 2016 - 2019)
-  qualification: Qualifications (eg. BA Performing Arts)
-  quote: >
-    Short institution or course description (optional)
+  name: University of Beira Interior
+  dates: 2019-2021 (expected)
+  qualification: MSc in Computer Science and Engineering
   description: | # this will include new lines to allow paragraphs
-    Description of qualification
+    Specialization area: Artificial Intelligence
+    
+- layout: left
+  name: Polytechnic Institute of Guarda
+  dates: 2016-2019
+  qualification: BSc in Computer Science and Engineering
+  description: | # this will include new lines to allow paragraphs
+    Grade: 17A
+    
