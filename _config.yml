@@ -3,29 +3,18 @@ repository: Git repository where your resume will be hosted, only required if yo
 # favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
 
 # Personal info
-name: Your Name
-title: Your job title
-email: Your email (optional)
-phone: Your phone number (optional)
-website: Your website (eg. https://google.com)(optional)
+name: Cristiano Pires Patrício
+title: Researcher | Computer Engineer
+email: cristiano.ppatricio@gmail.com
+website: https://cristianopatricio.github.io/
 
 # Dark Mode (true/false/never)
 darkmode: false
 
 # Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-googleplus_username: +jekyll
-orcid_username: 0000-0000-0000-0000
+github_username:  CristianoPatricio
+linkedin_username: cristiano-patrício-a7284a119
+orcid_username: 0000-0003-2215-3334
 
 # Additional icon links
 additional_links:
@@ -44,15 +33,14 @@ additional_links:
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
+about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
-
-  You can even add paragraphs by using empty lines like this and add anything else markdown supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images
+Graduated in Computer Science and Engineering.
+I'm a Master's degree student in Computer Science and Engineering at UBI, Portugal.
+Currently, I'm doing my master's thesis in the field of Artificial Intelligence.
+I'm an organized, methodical, responsible, creative and applied person.
+I write about my course in my personal blog «Vida de um Estudante de Engenharia Informática».
+Main interests: Artificial Intelligence, Machine Learning, Robotics, Algorithms, Systems Architecture & Design.
 
 # Projects Section
 # projects_title: Projects #(Use this to override about projects section title)
