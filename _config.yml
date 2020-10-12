@@ -37,7 +37,7 @@ about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
     Graduated in Computer Science and Engineering.
     I'm a Master's degree student in Computer Science and Engineering at UBI, Portugal.
-    Currently, I'm doing my master's thesis in the field of Artificial Intelligence.
+    Currently, I'm doing my Master's Thesis in the field of Artificial Intelligence.
     I'm an organized, methodical, responsible, creative and applied person.
     I write about my course in my personal blog «Vida de um Estudante de Engenharia Informática».
     Main interests: Artificial Intelligence, Machine Learning, Robotics, Algorithms, Systems Architecture & Design.
@@ -54,9 +54,7 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me #(Use this to override about more section title)
 more_content: | # this will include new lines to allow paragraphs
-  This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-  Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+  Outside the office, I like to read a nice book and also playing accordion/guitar. I'm a curious guy who spends time learning new things to keep soft skills refined.
 
 # Footer
 footer_show_references: true
