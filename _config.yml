@@ -35,8 +35,8 @@ orcid_username: 0000-0003-2215-3334
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-    Cristiano Patrício received the master's degree in Computer Science and Engineering in 2021 from UBI.  
-    Cristiano is currently a Ph.D. student in Computer Science and Engineering from UBI.
+    Cristiano Patrício received the master's degree in Computer Science and Engineering in 2021 from UBI. <br>
+    Cristiano is currently a Ph.D. student in Computer Science and Engineering from UBI. <br>
     His research interests includes Deep Learning, Explainable AI, and Medical Image Analysis.
 
 # Projects Section
@@ -51,7 +51,7 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me #(Use this to override about more section title)
 more_content: | # this will include new lines to allow paragraphs
-  Outside the office, I like to read a nice book, play chess or play guitar/accordion. I'm a curious guy who spends time learning new things to keep soft skills refined.
+  Outside the office, I like to read a nice book, play chess or play guitar/accordion. I'm a curious guy who spends time learning new things to keep soft skills refined. <br>
   *"Hard work always pays off, whatever you do." - Dustin Lynch*
 
 # Footer
