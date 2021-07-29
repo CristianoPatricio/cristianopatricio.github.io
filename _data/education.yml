@@ -4,8 +4,8 @@
   dates: 2019-2021
   qualification: M.Sc. in Computer Science and Engineering
   description: | # this will include new lines to allow paragraphs
-    **Research Area:** Artificial Intelligence
-    **Thesis**: "A zero-shot learning method for recognizing objects using low-power devices"
+    **Research Area:** Artificial Intelligence <br>
+    **Thesis**: "A zero-shot learning method for recognizing objects using low-power devices" <br>
     **Grade:** 18(A)
     
 - layout: left
@@ -13,5 +13,5 @@
   dates: 2016-2019
   qualification: B.Sc. in Computer Science and Engineering
   description: | # this will include new lines to allow paragraphs
-    **Main fieds:** Programming and Multimedia, Software Enginnering, Networks and Systems, Electronics.
+    **Main fieds:** Programming and Multimedia, Software Enginnering, Networks and Systems, Electronics. <br>
     **Grade:** 17(A)
