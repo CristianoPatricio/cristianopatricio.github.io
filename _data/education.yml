@@ -3,6 +3,7 @@
   name: University of Beira Interior
   dates: 2019-2021
   qualification: M.Sc. in Computer Science and Engineering
+  quote: >
   description: | # this will include new lines to allow paragraphs
     **Research Area:** Artificial Intelligence |
     **Thesis**: "A zero-shot learning method for recognizing objects using low-power devices" |
@@ -12,6 +13,7 @@
   name: Polytechnic Institute of Guarda
   dates: 2016-2019
   qualification: B.Sc. in Computer Science and Engineering
+  quote: >
   description: | # this will include new lines to allow paragraphs
     **Main fieds:** Programming and Multimedia, Software Enginnering, Networks and Systems, Electronics. |
     **Grade:** 17(A)
