@@ -3,9 +3,10 @@
   company: NOVA LINCS-UBI
   link: https://www.ubi.pt/Entidade/nova_lincs
   job_title: Researcher
-  dates: October 2020 - present
+  dates: October 2020 - July 2021
   description: | # this will include new lines to allow paragraphs
-    Conducting my Master's Thesis in the field of Artificial Intelligence.
+    Research fellow at NOVA LINCS where I developed my master's dissertation titled "A zero-shot learning method for recognizing objects using low-power devices" in the scope of the "Perception for a Service Robot" project.
+    Coding in Python, Tensorflow, and Keras.
     
 - layout: left
   company: MagicKey

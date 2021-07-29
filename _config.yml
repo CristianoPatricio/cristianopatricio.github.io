@@ -4,7 +4,7 @@ repository: Git repository where your resume will be hosted, only required if yo
 
 # Personal info
 name: Cristiano Pires Patrício
-title: Researcher | MSc Student in Computer Science and Engineering
+title: Researcher | M.Sc. in Computer Science and Engineering
 email: cristiano.ppatricio@gmail.com
 website: https://cristianopatricio.github.io/
 
@@ -35,12 +35,9 @@ orcid_username: 0000-0003-2215-3334
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-    Graduated in Computer Science and Engineering.
-    I'm a Master's degree student in Computer Science and Engineering at UBI, Portugal.
-    Currently, I'm doing my Master's Thesis in the field of Artificial Intelligence.
-    I'm an organized, methodical, responsible, creative and applied person.
-    I write about my course in my personal blog «Vida de um Estudante de Engenharia Informática».
-    Main interests: Artificial Intelligence, Machine Learning, Robotics, Algorithms, Systems Architecture & Design.
+    Cristiano Patrício received the master's degree in Computer Science and Engineering in 2021 from UBI. <br>
+    Cristiano is currently a Ph.D. student in Computer Science and Engineering from UBI. <br>
+    His research interests includes Deep Learning, Explainable AI, and Medical Image Analysis.
 
 # Projects Section
 # projects_title: Projects #(Use this to override about projects section title)
@@ -54,7 +51,8 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me #(Use this to override about more section title)
 more_content: | # this will include new lines to allow paragraphs
-  Outside the office, I like to read a nice book and also playing accordion/guitar. I'm a curious guy who spends time learning new things to keep soft skills refined.
+  Outside the office, I like to read a nice book, play chess or play guitar/accordion. I'm a curious guy who spends time learning new things to keep soft skills refined. <br>
+  *"Hard work always pays off, whatever you do." - Dustin Lynch*
 
 # Footer
 footer_show_references: true

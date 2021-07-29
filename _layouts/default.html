@@ -27,6 +27,10 @@
       {%- if site.data.education.size > 0 -%}
         {%- include education.html -%}
       {%- endif -%}
+      
+      {%- if site.programming -%}
+        {%- include programming.html -%}
+      {%- endif -%}
 
       {%- if site.more_content -%}
         {%- include more.html -%}
