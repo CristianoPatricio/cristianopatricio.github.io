@@ -49,7 +49,7 @@ about_content: | # this will include new lines to allow paragraphs
 # education_title: Education #(Use this to override about education section title)
 
 # Programming Skills Section
-# programming: Programming Skills
+# programming_title: Programming Skills #(Use this to override about more section title)
 programming: |
   Python <br>
   Java <br>
