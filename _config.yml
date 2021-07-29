@@ -36,8 +36,8 @@ orcid_username: 0000-0003-2215-3334
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
     Cristiano Patrício received the master's degree in Computer Science and Engineering in 2021 from UBI.  
-    Cristiano is currently a Ph.D. student in Computer Science and Engineering from UBI. 
-    His research interests includes Deep Learning, Explainable AI, Medical Image Analysis.
+    Cristiano is currently a Ph.D. student in Computer Science and Engineering from UBI.
+    His research interests includes Deep Learning, Explainable AI, and Medical Image Analysis.
 
 # Projects Section
 # projects_title: Projects #(Use this to override about projects section title)
