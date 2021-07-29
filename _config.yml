@@ -68,7 +68,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="fas fa-circle"/>
             <i class="fas fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">Java</td>
         <td style="text-align:center">
@@ -78,7 +79,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">C</td>
         <td style="text-align:center">
@@ -88,7 +90,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">C#</td>
         <td style="text-align:center">
@@ -98,7 +101,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">JavaScript</td>
         <td style="text-align:center">
@@ -108,7 +112,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">PHP</td>
         <td style="text-align:center">
@@ -118,7 +123,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">ASP.NET</td>
         <td style="text-align:center">
@@ -128,7 +134,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">SQL</td>
         <td style="text-align:center">
@@ -138,7 +145,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">PL-SQL</td>
         <td style="text-align:center">
@@ -148,7 +156,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">MySQL</td>
         <td style="text-align:center">
@@ -158,7 +167,8 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
+        </td>
+    </tr>
     <tr>
         <td style="text-align:center">Postgres</td>
         <td style="text-align:center">
@@ -168,8 +178,9 @@ programming: |
             <i class="fas fa-circle"/>
             <i class="far fa-circle"/>
             <i class="far fa-circle"/>
-        </tr>
-    </tbody>
+        </td>
+     </tr>
+     </tbody>
   </table>
 
 # More Section
