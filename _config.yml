@@ -52,13 +52,13 @@ about_content: | # this will include new lines to allow paragraphs
 # programming_title: Programming Skills #(Use this to override about more section title)
 programming: |
   <table>
-    <thead>
+    <thead style="font-size:18px;">
     <tr>
         <th style="text-align:center">Language</th>
         <th style="text-align:center">Level of Expertise</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody style="font-size:14px;">
     <tr>
         <td style="text-align:center">Python</td>
         <td style="text-align:center">
