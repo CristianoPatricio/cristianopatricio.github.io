@@ -51,7 +51,7 @@ about_content: | # this will include new lines to allow paragraphs
 # Publications Section
 # publications_title: Publications #(Use this to override about more section title)
 publications: |
-    <p style="font-size:18px;"><b>Conference</b></p>
+    <p style="font-size:20px;"><b>Conference</b></p>
     <ul style="list-style-type: none;" >
         <li>
             <b>C. Patrício</b>, and J. Neves. <a href="https://arxiv.org/pdf/2110.04535.pdf" style="color: #0088FF;" target="blank"><em>ZSpeedL - Evaluating the Performance of Zero-Shot Learning Methods using Low-Power Devices</em></a>. In Proceedings of the 17th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS), 2021.
@@ -66,25 +66,25 @@ publications: |
         </li>
     </ul>
     <br>
-    <p style="font-size:18px;"><b>Journal</b></p>
+    <p style="font-size:20px;"><b>Journal</b></p>
     <ul style="list-style-type: none;" >
         <li>
         <b>C. Patrício</b>, R. Pinto, G. Marques. <a href="https://link.springer.com/chapter/10.1007/978-3-030-47411-9_3#citeas" style="color: #0088FF;" target="blank"><em>A Study on Software Testing
     Standard Using ISO/IEC/IEEE 29119-2: 2013</em></a>. In: Al-Emran M., Shaalan K.,
     Hassanien A. (Eds.) Recent Advances in Intelligent Systems and Smart
     Applications. Studies in Systems, Decision and Control, vol 295, Springer,
-    pp. 43-62, doi:<a href="https://doi.org/10.1007/978-3-030-47411-9_3">10.1007/978-3-030-47411-9_3</a>, 2020.
+    pp. 43-62, doi: <a href="https://doi.org/10.1007/978-3-030-47411-9_3">10.1007/978-3-030-47411-9_3</a>, 2020.
         </li>
     </ul>
     <br>
-    <p style="font-size:18px;"><b>Thesis</b></p>
+    <p style="font-size:20px;"><b>Thesis</b></p>
     <ul style="list-style-type: none;" >
         <li>
             <b>C. Patrício</b>. <a href="" style="color: #0088FF;" target="blank"><em>A zero-shot learning method for recognizing objects using low-power devices</em></a>. MSc Thesis, Universidade da Beira Interior, Covilhã, Portugal, 2021. 
         </li>
     </ul>
     <br>
-    <p style="font-size:18px;"><b>Electronic Articles</b></p>
+    <p style="font-size:20px;"><b>Electronic Articles</b></p>
     <ul style="list-style-type: none;" >
         <li>
             <b>Patrício, C.</b> (2019) "Apache Hadoop - Instalação e configuração de um cluster no Ubuntu 18.04", Pplware. Available: <a href="https://pplware.sapo.pt/tutoriais/apache-hadoop-instalacao-ubuntu/">https://pplware.sapo.pt/tutoriais/apache-hadoop-instalacao-ubuntu/</a>.
