@@ -51,10 +51,15 @@ about_content: | # this will include new lines to allow paragraphs
 # Publications Section
 # publications_title: Publications #(Use this to override about more section title)
 publications: |
-    <h3>Conferences</h3>
     <ul style="list-style-type: none;" >
         <li>
-            Examples
+            <b>Conference Papers</b>
+        </li>
+        <li>
+            <b>Journal Papers</b>
+        </li>
+        <li>
+            <b>Electronic Articles</b>
         </li>
     </ul>
 
