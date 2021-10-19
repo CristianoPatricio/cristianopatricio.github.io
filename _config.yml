@@ -4,7 +4,7 @@ repository: Git repository where your resume will be hosted, only required if yo
 
 # Personal info
 name: Cristiano Patrício
-title: AI Researcher | M.Sc. in Computer Science and Engineering
+title: AI Researcher | Ph.D. Student in Computer Science and Engineering
 email: cristiano.ppatricio@gmail.com
 website: https://cristianopatricio.github.io/
 
@@ -47,6 +47,16 @@ about_content: | # this will include new lines to allow paragraphs
 
 # Education Section
 # education_title: Education #(Use this to override about education section title)
+
+# Publications Section
+# publications_title: Publications #(Use this to override about more section title)
+publications: |
+    <h3>Conferences</h3>
+    <ul style="list-style-type: none;" >
+        <li>
+            Examples
+        </li>
+    </ul>
 
 # Programming Skills Section
 # programming_title: Programming Skills #(Use this to override about more section title)
