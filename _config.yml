@@ -51,18 +51,16 @@ about_content: | # this will include new lines to allow paragraphs
 # Publications Section
 # publications_title: Publications #(Use this to override about more section title)
 publications: |
-    <p><b>Conference Papers</b></p>
+    <p><b>Conference</b></p>
     <ul style="list-style-type: none;" >
         <li>
-            <b>Conference Papers</b>
-        </li>
-        <li>
-            <b>Journal Papers</b>
-        </li>
-        <li>
-            <b>Electronic Articles</b>
+            <b>C. Patrício</b>, and J. Neves. <em>ZSpeedL - Evaluating the Performance of Zero-Shot Learning Methods using Low-Power Devices</em>. In Proceedings of the 17th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS), 2021.
         </li>
     </ul>
+    <p><b>Journal</b></p>
+    <p><b>Thesis</b></p>
+    <p><b>Electronic Articles</b></p>
+    
 
 # Programming Skills Section
 # programming_title: Programming Skills #(Use this to override about more section title)
