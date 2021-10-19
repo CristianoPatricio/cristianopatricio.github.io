@@ -51,15 +51,15 @@ about_content: | # this will include new lines to allow paragraphs
 # Publications Section
 # publications_title: Publications #(Use this to override about more section title)
 publications: |
-    <p><b>Conference</b></p>
+    <p style="font-size:18px;"><b>Conference</b></p>
     <ul style="list-style-type: none;" >
         <li>
             <b>C. Patrício</b>, and J. Neves. <a href="https://arxiv.org/pdf/2110.04535.pdf" style="color: #0088FF;"><em>ZSpeedL - Evaluating the Performance of Zero-Shot Learning Methods using Low-Power Devices</em></a>. In Proceedings of the 17th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS), 2021.
         </li>
     </ul>
-    <p><b>Journal</b></p>
-    <p><b>Thesis</b></p>
-    <p><b>Electronic Articles</b></p>
+    <p style="font-size:18px;"><b>Journal</b></p>
+    <p style="font-size:18px;"><b>Thesis</b></p>
+    <p style="font-size:18px;"><b>Electronic Articles</b></p>
     
 
 # Programming Skills Section
