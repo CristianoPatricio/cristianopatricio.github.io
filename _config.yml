@@ -242,8 +242,13 @@ programming: |
 # More Section
 # more_title: A Little More About Me #(Use this to override about more section title)
 more_content: | # this will include new lines to allow paragraphs
-  Outside the office, I like to read a nice book, play chess or play guitar/accordion. I'm a curious guy who spends time learning new things to keep soft skills refined. <br>
-  *"Hard work always pays off, whatever you do." - Dustin Lynch*
+  Outside the office, I like to read a nice book, play chess or play guitar/accordion. I'm a curious guy who spends time learning new things to keep soft skills refined. 
+  <br><br>
+  <p><em>Selected Quotes:</em></p>
+  <ul style="list-style-type: none;">
+    <li><em>"Hard work always pays off, whatever you do."</em> - Dustin Lynch</li>
+    <li><em>"If you can't explain something to a first year student, then you haven't really understood."</em> - Richard P. Feynman</li>
+  </ul>
 
 # Footer
 footer_show_references: true
