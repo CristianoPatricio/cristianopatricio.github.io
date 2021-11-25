@@ -1,5 +1,14 @@
 # Experience template
 - layout: left
+  company: Polytehcnic of Guarda
+  link: http://www.ipg.pt/website/
+  job_title: Invited Assistant
+  dates: November 2021 - Now
+  description: | # this will include new lines to allow paragraphs
+    Course: Information and Communications Technology
+    1st year - TG
+    
+- layout: left
   company: NOVA LINCS-UBI
   link: https://www.ubi.pt/Entidade/nova_lincs
   job_title: Researcher
