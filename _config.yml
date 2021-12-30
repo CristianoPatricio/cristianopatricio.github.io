@@ -51,7 +51,7 @@ about_content: | # this will include new lines to allow paragraphs
 # Publications Section
 # publications_title: Publications #(Use this to override about more section title)
 publications: |
-    <p style="font-size:20px;"><b>Conference</b></p>
+    <p style="font-size:20px;"><b>Conferences</b></p>
     <ul style="list-style-type: none;" >
         <li>
             <b>C. Patrício</b>, and J. Neves. <a href="https://arxiv.org/pdf/2110.04535.pdf" style="color: #cf2e2e;" target="blank"><em>ZSpeedL - Evaluating the Performance of Zero-Shot Learning Methods using Low-Power Devices</em></a>. In Proceedings of the 17th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS), 2021.
@@ -66,7 +66,7 @@ publications: |
         </li>
     </ul>
     <br>
-    <p style="font-size:20px;"><b>Journal</b></p>
+    <p style="font-size:20px;"><b>Book Chapters</b></p>
     <ul style="list-style-type: none;" >
         <li>
         <b>C. Patrício</b>, R. Pinto, G. Marques. <a href="https://link.springer.com/chapter/10.1007/978-3-030-47411-9_3#citeas" style="color: #cf2e2e;" target="blank"><em>A Study on Software Testing
