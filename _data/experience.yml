@@ -5,8 +5,21 @@
   job_title: Invited Assistant
   dates: November 2021 - Now
   description: | # this will include new lines to allow paragraphs
-    Course: Information and Communications Technology <br>
-    1st year - TG
+    <b>Spring</b>
+    Course: Information and Communications Technologies <br>
+    1st year - TG <br><br>
+    
+    <b>Fall</b>
+    Course: Information Technologies
+    1st year - TGAT
+    
+- layout: left
+  company: NOVA LINCS-UBI
+  link: https://www.ubi.pt/Entidade/nova_lincs
+  job_title: Researcher
+  dates: December 2021 - Now
+  description: | # this will include new lines to allow paragraphs
+    Research fellow at NOVA LINCS in the scope of PhD.
     
 - layout: left
   company: NOVA LINCS-UBI
