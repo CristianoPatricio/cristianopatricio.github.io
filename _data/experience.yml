@@ -3,7 +3,7 @@
   company: Polytehcnic of Guarda
   link: http://www.ipg.pt/website/
   job_title: Invited Assistant
-  dates: November 2021 - Now
+  dates: November 2021 - July 2022
   description: | # this will include new lines to allow paragraphs
     <b>Spring</b><br>
     Course: Information and Communications Technologies <br>
@@ -12,12 +12,20 @@
     <b>Fall</b><br>
     Course: Information Technologies <br>
     1st year - TGAT
+
+- layout: left
+  company: INESC TEC
+  link: https://www.inesctec.pt/en/people/cristiano-pires-patricio
+  job_title: Research Assistant
+  dates: February 2022 - Now
+  description: | # this will include new lines to allow paragraphs
+    Research Assistant at INESC TEC -  Institute for Systems and Computer Engineering, Technology and Science.
     
 - layout: left
   company: NOVA LINCS-UBI
   link: https://www.ubi.pt/Entidade/nova_lincs
   job_title: Researcher
-  dates: December 2021 - Now
+  dates: December 2021 - May 2021
   description: | # this will include new lines to allow paragraphs
     Research fellow at NOVA LINCS in the scope of PhD.
     
