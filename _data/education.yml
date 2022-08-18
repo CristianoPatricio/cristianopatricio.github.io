@@ -4,7 +4,7 @@
   dates: 2021-2025 (expected)
   qualification: Ph.D. in Computer Science and Engineering
   description: > # this will include new lines to allow paragraphs
-    **Research Areas:** Deep Learning, Explainable AI, Medical Image Analysis
+    **Research Areas:** Deep Learning, Explainable AI, Medical Image Analysis <br>
     **Topic**: Explainable AI for Medical Imaging
     
 - layout: left
