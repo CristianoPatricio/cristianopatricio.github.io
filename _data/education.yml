@@ -13,7 +13,7 @@
   qualification: M.Sc. in Computer Science and Engineering
   description: > # this will include new lines to allow paragraphs
     **Research Area:** Artificial Intelligence <br>
-    **Thesis**: <a href="http://hdl.handle.net/10400.6/11822" target="blank">A zero-shot learning method for recognizing objects using low-power devices</a> <br>
+    **Thesis**: <a href="http://hdl.handle.net/10400.6/11822" style="color: #cf2e2e;" target="blank">A zero-shot learning method for recognizing objects using low-power devices</a> <br>
     **Grade:** 18(A)
     
 - layout: left
@@ -22,5 +22,5 @@
   qualification: B.Sc. in Computer Science and Engineering
   description: > # this will include new lines to allow paragraphs
     **Main fieds:** Programming and Multimedia, Software Enginnering, Networks and Systems, Electronics. <br>
-    **Final Project**: <a href="http://hdl.handle.net/10314/4818" target="blank">MagicContact Web – Aplicação Web de Comunicação Aumentativa e Alternativa</a>
+    **Final Project**: <a href="http://hdl.handle.net/10314/4818" style="color: #cf2e2e;" target="blank">MagicContact Web – Aplicação Web de Comunicação Aumentativa e Alternativa</a> <br>
     **Grade:** 17(A)
