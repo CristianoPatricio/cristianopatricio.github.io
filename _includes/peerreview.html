@@ -1,0 +1,8 @@
+<div class="container more-container">
+  <h3>{{ site.peerreview_title | default: "Peer Review" }}</h3>
+  <div class="row clearfix">
+    <div class="col-md-12">
+      {{ site.peerreview | strip | markdownify }}
+    </div>
+  </div>
+</div>
