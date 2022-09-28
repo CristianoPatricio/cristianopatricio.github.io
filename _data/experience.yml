@@ -1,5 +1,13 @@
 # Experience template
 - layout: left
+  company: Fundação para a Ciência e a Tecnologia (FCT)
+  link: https://fct.pt/index.phtml.en
+  job_title: Ph.D. Research Fellow
+  dates: September 2022 - Now
+  description: | # this will include new lines to allow paragraphs
+    Ph.D. research grant from the Portuguese national funding agency for science (FCT).
+    
+- layout: left
   company: Polytehcnic of Guarda
   link: http://www.ipg.pt/website/
   job_title: Invited Assistant
