@@ -32,6 +32,10 @@
         {%- include publications.html -%}
       {%- endif -%}
       
+      {%- if site.students -%}
+        {%- include students.html -%}
+      {%- endif -%}
+      
       {%- if site.peerreview -%}
         {%- include peerreview.html -%}
       {%- endif -%}
