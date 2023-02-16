@@ -115,6 +115,15 @@ publications: |
             Available: <a href="https://pplware.sapo.pt/software/criacao-de-uma-maquina-virtual-com-vmware-workstation/" style="color: #333; text-decoration: underline;">https://pplware.sapo.pt/software/criacao-de-uma-maquina-virtual-com-vmware-workstation/</a>.
         </li>
     </ul>
+    
+# Students Section
+# students_title: Students #(Use this to override about more section title)
+students: |
+    <p style="font-size:20px;"><b>B.Sc. Students</b></p>
+    <ul style="list-style-type: none;" >
+        <li>
+            Alexandre Monteiro. <a href="https://www.di.ubi.pt/~jcneves/bsc_projects/2021_2022/relatorio_alex_monteiro.pdf" style="color: #cf2e2e;" target="blank"><em> Modelo baseado em deep learning para a classificação de doenças pulmonares em imagens raio-X do tórax </em></a>. University of Beira Interior, 2022. (co-supervisor)
+        </li>
 
 # Peer Review Section
 # peerreview_title: Peer Review #(Use this to override about more section title)
