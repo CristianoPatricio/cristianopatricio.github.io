@@ -52,7 +52,15 @@ publications: |
     <p style="font-size:20px;"><b>Conferences</b></p>
     <ul style="list-style-type: none;" >
         <li>
-            <b>C. Patrício</b>, J. Neves, L. Teixeira. <a href="https://openaccess.thecvf.com/content/CVPR2023W/SAIAD/papers/Patricio_Coherent_Concept-Based_Explanations_in_Medical_Image_and_Its_Application_to_CVPRW_2023_paper.pdf" style="color: #cf2e2e;" target="blank"><em>Coherent Concept-based Explanations in Medical Image and Its Application to Skin Lesion Diagnosis</em></a>. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3798-3807, 2023. 
+            <b>C. Patrício</b>, J. Neves, L. Teixeira. <a href="https://openaccess.thecvf.com/content/CVPR2023W/SAIAD/papers/Patricio_Coherent_Concept-Based_Explanations_in_Medical_Image_and_Its_Application_to_CVPRW_2023_paper.pdf" style="color: #cf2e2e;" target="blank"><em>Coherent Concept-based Explanations in Medical Image and Its Application to Skin Lesion Diagnosis</em></a>. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3798-3807, 2023. [<a href="https://github.com/CristianoPatricio/coherent-cbe-skin" style="color: #cf2e2e;>Code</a>] 
+        </li>
+        <br>
+        <li>
+            I. Rio-Torto, <b>C. Patrício</b>, H. Montenegro, T. Gonçalves and J. S. Cardoso. <a href="#" style="color: #cf2e2e;" target="blank"><em>Detecting Concepts and Generating Captions from Medical Images: Contributions of the VCMI Team to ImageCLEFmed Caption 2023</em></a>. Conference and Labs of the Evaluation Forum (CLEF), 2023.
+        </li>
+        <br>
+        <li>
+            H. Montenegro, P. Neto, <b>C. Patrício</b>, I. Rio-Torto, T. Gonçalves and L. F. Teixeira. <a href="#" style="color: #cf2e2e;" target="blank"><em>Evaluating Privacy on Synthetic Images Generated using GANs: Contributions of the VCMI Team to ImageCLEFmed Caption 2023</em></a>. Conference and Labs of the Evaluation Forum (CLEF), 2023.
         </li>
         <br>
         <li>
@@ -64,7 +72,7 @@ publications: |
         </li>
         <br>
         <li>
-            <b>C. Patrício</b>, and J. Neves. <a href="https://arxiv.org/pdf/2110.04535.pdf" style="color: #cf2e2e;" target="blank"><em>ZSpeedL - Evaluating the Performance of Zero-Shot Learning Methods using Low-Power Devices</em></a>. In Proceedings of the 17th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS), 2021.
+            <b>C. Patrício</b>, and J. Neves. <a href="https://arxiv.org/pdf/2110.04535.pdf" style="color: #cf2e2e;" target="blank"><em>ZSpeedL - Evaluating the Performance of Zero-Shot Learning Methods using Low-Power Devices</em></a>. In Proceedings of the 17th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS), 2021. [<a href="https://github.com/CristianoPatricio/zsl-methods" style="color: #cf2e2e;>Code</a>]
         </li>
         <br>
         <li>
