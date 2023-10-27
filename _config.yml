@@ -54,6 +54,13 @@ publications: |
         <li>
             <b>C. Patrício</b>, J. Neves, L. Teixeira. <a href="https://openaccess.thecvf.com/content/CVPR2023W/SAIAD/papers/Patricio_Coherent_Concept-Based_Explanations_in_Medical_Image_and_Its_Application_to_CVPRW_2023_paper.pdf" style="color: #cf2e2e;" target="blank"><em>Coherent Concept-based Explanations in Medical Image and Its Application to Skin Lesion Diagnosis</em></a>. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), Vancouver, BC, Canada, 2023, pp. 3799-3808. doi: <a href="https://doi.org/10.1109/CVPRW59228.2023.00394" style="color: #333; text-decoration: underline;">10.1109/CVPRW59228.2023.00394</a>. [<a href="https://github.com/CristianoPatricio/coherent-cbe-skin" style="color: #cf2e2e;">Code</a>] 
         </li>
+         <li>
+            I. Rio-Torto, <b>C. Patrício</b>, H. Montenegro, T. Gonçalves and J. S. Cardoso. <a href="#" style="color: #cf2e2e;" target="blank"><em>Detecting Concepts and Generating Captions from Medical Images: Contributions of the VCMI Team to ImageCLEFmed Caption 2023</em></a>. In 29th Portuguese Conference on Pattern Recognition (RECPAD 2023), October 27, Coimbra, Portugal, 2023.
+        </li>
+        <br>
+        <li>
+            H. Montenegro, P. Neto, <b>C. Patrício</b>, I. Rio-Torto, T. Gonçalves and L. F. Teixeira. <a href="#" style="color: #cf2e2e;" target="blank"><em>Evaluating Privacy on Synthetic Images Generated using GANs: Contributions of the VCMI Team to ImageCLEFmed Caption 2023</em></a>. In 29th Portuguese Conference on Pattern Recognition (RECPAD 2023), October 27, Coimbra, Portugal, 2023.
+        </li>
         <br>
         <li>
             I. Rio-Torto, <b>C. Patrício</b>, H. Montenegro, T. Gonçalves and J. S. Cardoso. <a href="#" style="color: #cf2e2e;" target="blank"><em>Detecting Concepts and Generating Captions from Medical Images: Contributions of the VCMI Team to ImageCLEFmed Caption 2023</em></a>. Conference and Labs of the Evaluation Forum (CLEF), 2023.
@@ -87,7 +94,7 @@ publications: |
     <p style="font-size:20px;"><b>Journals</b></p>
     <ul style="list-style-type: none;" >
         <li>
-            <b>C. Patrício</b>, João C. Neves, Luís F. Teixeira. <a href="https://arxiv.org/pdf/2205.04766" style="color: #cf2e2e;" target="blank"><em>Explainable Deep Learning Methods in Medical Image Classification: A Survey</em></a>. Accepted in ACM Computing Surveys. CoRR, abs/2205.04766, 2022.
+            <b>C. Patrício</b>, João C. Neves, Luís F. Teixeira. <a href="https://arxiv.org/pdf/2205.04766" style="color: #cf2e2e;" target="blank"><em>Explainable Deep Learning Methods in Medical Image Classification: A Survey</em></a>. ACM Computing Surveys 56, 4, Article 85, 2023.
         </li>
         <br>
         <li>
