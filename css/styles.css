@@ -10977,6 +10977,8 @@ section.resume-section .resume-section-content {
   border: 1px solid #166f8a; 
   color: #fff; 
   background-color: #166f8a; 
+  min-width: 38px !important;
+  justify-content: center;
   margin-right: 10px; 
   padding-left: 8px; 
   padding-right: 8px; 
