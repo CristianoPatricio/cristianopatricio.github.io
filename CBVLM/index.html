@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CBVLM: Training-free Explainable Concept-based Large Vision Language Models for Medical Image Classification</title>
+  <meta name="description" content="Project page for CBVLM: Training-free Explainable Concept-based Large Vision Language Models for Medical Image Classification.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta charset="utf-8">
+
+  <!--Facebook preview-->
+  <meta property="og:image" content="https://imagine.enpc.fr/~monniert/DTIClustering/thumbnail.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="400">
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://imagine.enpc.fr/~monniert/DTIClustering/"/>
+  <meta property="og:title" content="DTI Clustering"/>
+  <meta property="og:description" content="Project page for Deep Transformation-Invariant Clustering."/>
+
+  <!--Twitter preview-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DTI Clustering" />
+  <meta name="twitter:description" content="Project page for Deep Transformation-Invariant Clustering."/>
+  <meta name="twitter:image" content="https://imagine.enpc.fr/~monniert/DTIClustering/thumbnail_twitter.png">
+
+  <!--Style-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Academicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container" style="text-align:center; padding:2rem 15px">
+  <div class="row" style="text-align:center">
+    <h1>CBVLM: Training-free Explainable Concept-based Large Vision Language Models for Medical Image Classification</h1>
+    <!--<h4>NeurIPS 2020 (oral presentation)</h4>-->
+  </div>
+  <div class="row" style="text-align:center">
+    <div class="col-xs-0 col-md-3"></div>
+    <div class="col-xs-12 col-md-6">
+      <h4>
+        <a href="https://cristianopatricio.github.io/" target="_blank"><nobr>Cristiano Patrício&#42;,<sup>1,3</sup></nobr></a> &emsp;
+        <a href="https://github.com/icrto" target="_blank"><nobr>Isabel Rio-Torto&#42;,<sup>2,3</sup></nobr></a> &emsp;
+        <a href="https://web.fe.up.pt/~jsc/" target="_blank"><nobr>Jaime S. Cardoso<sup>2,3</sup></nobr></a>
+        <a href="https://lfpt.github.io" target="_blank"><nobr>Luís F. Teixeira<sup>2,3</sup></nobr></a>
+        <a href="https://www.di.ubi.pt/~jcneves/" target="_blank"><nobr>João C. Neves<sup>1</sup></nobr></a>
+      </h4>
+      &#42;Equal Contribution, <nobr><sup>1</sup>University of Beira Interior and NOVA LINCS</nobr>, <nobr><sup>2</sup>University of Porto</nobr>, <nobr><sup>3</sup>INESC TEC</nobr>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1" style="text-align:left; margin-left:0px; margin-right:0px">
+      <a href="" style="color:inherit">
+        <i class="fa fa-file-pdf-o fa-4x"></i></a> 
+    </div>
+    <div class="hidden-xs hidden-sm col-md-2" style="text-align:left; margin-left:0px;">
+      <a href="" style="color:inherit">
+        <i class="fa fa-github fa-4x"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center; padding:1rem">
+  <img src="assets/img/CBVLM_teaser.png" alt="CBVLM teaser" class="text-center teaser-img-mobile" style="width: 45%; max-width: 1100px">
+  <h3 style="text-align:center; padding-top:1rem">
+    <a class="label label-info" href=""><i class="ai ai-arxiv"></i> arXiv</a>
+    <a class="label label-info" href=""><i class="fa fa-github"></i> Code</a>
+    <!--<a class="label label-info" href="https://www.youtube.com/embed/j20MBc1hWGQ">Video</a>-->
+    <!--<a class="label label-info" href="resrc/dtic_long.pptx">Slides</a>-->
+    <a class="label label-info" href="assets/ref.bib">BibTeX</a>
+  </h3>
+</div>
+
+<div class="container">
+  <h3>Abstract</h3>
+  <hr/>
+  <p>
+    The main challenges limiting the adoption of deep learning-based solutions in medical workflows are the availability 
+    of annotated data and the lack of interpretability of such systems. Concept Bottleneck Models (CBMs) tackle the latter
+     by constraining the final disease prediction on a set of predefined and human-interpretable concepts. However,
+     the increased interpretability achieved through these concept-based explanations implies a higher annotation burden. 
+     Moreover, if a new concept needs to be added, the whole system needs to be retrained. Inspired by the remarkable 
+     performance shown by Large Vision-Language Models (LVLMs) in few-shot settings, we propose a simple, yet effective, 
+     methodology, <b><em>CBVLM</em></b>, which tackles both of the aforementioned challenges. By having two stages like the original 
+     CBM we ensure explainability, and by leveraging the few-shot capabilities of LVLMs we drastically lower the annotation cost. 
+     We validate our approach with extensive experiments across four medical datasets and twelve LVLMs (both generic and medical) 
+     and show that <b><em>CBVLM</em></b> consistently outperforms CBMs and task-specific supervised methods, without requiring any training 
+     and using just a few annotated examples.
+  </p>
+
+  <h3>Methodology</h3>
+  <hr/>
+  <div class="row" style="text-align: center">
+      <h4><u>CBVLM Pipeline</u></h4>
+  </div>
+  <div class="row" style="text-align: center">
+      <img src="assets/img/CBVLM_pipeline.png" alt="CBVLM Pipeline" class="text-center" style="width: 100%; max-width: 900px">
+  </div>
+  <div class="row" style="text-align:center; padding-left:1rem; padding-right:1rem; padding-bottom:1rem;">
+      <div>
+      <p><b>Overview of CBMVLM.</b> Our methodology is organized into two key stages: 
+        1) The <em><u>Concept Detection</u></em> stage, where the LVLM predicts the individual presence 
+        of each predefined clinical concept in the query image. This is achieved using a custom prompt that 
+        supports both zero- and few-shot settings. In the latter, we include a set of demonstration examples 
+        (middle block of <em>Prompt Construction</em>) chosen by the <em>Retrieval Module</em>, responsible 
+        for selecting the <em>N</em> most similar examples to the input image. To evaluate the LVLM answer, we employ 
+        an <em>Evaluation Block</em> which first tries to extract the desired LVLM response using a rule-based 
+        formulation. If this fails, we adopt an auxiliary LLM to extract the desired response. 2) In the 
+        <em><u>Disease Diagnosis</u></em> stage, the final diagnosis is generated by the LVLM based on the 
+        clinical concepts predicted in the first stage, which are directly incorporated in the query (highlighted in yellow). 
+        This approach ensures that the diagnosis is grounded on the identified clinical concepts, enhancing the interpretability 
+        and transparency of the LVLM’s response. In this second stage the <em>Retrieval Module</em> is also used.</p>
+      </div>
+  </div>
+
+  <h3>Results</h3>
+  <hr/>
+  <div class="row" style="text-align: center; padding-left:1rem; padding-right:1rem; padding-bottom:1rem;">
+    <h4><u>Influence of the example set size on the concept prediction performance of <em>CBVLM</em></u></h4>
+      <img src="assets/img/CBVLM_set_size.png" alt="prototypes.jpg" class="text-center" style="width: 100%; max-width: 1000px;">
+      <p>Even when only 10% of the example images per class are available <em>CBVLM</em> outperforms CBM, except for Derm7pt. Thus, <em>CBVLM</em> indeed requires few annotated examples.</p>
+  </div>
+
+  <!--
+  <h3>Resources</h3>
+  <hr/>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-0 col-lg-0"></div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Paper</h4>
+      <a href="https://arxiv.org/abs/2006.11132" style="color:inherit">
+        <img src="resrc/paper.jpg" alt="paper.jpg" class="text-center" style="max-width:70%; border:0.15em solid;
+        border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Code</h4>
+      <a href="https://github.com/monniert/dti-clustering" style="color:inherit;">
+        <img src="resrc/github_repo.png" alt="github_repo.png" class="text-center"
+             style="max-width:70%; border:0.15em solid;border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Slides</h4>
+      <a href="dtic_long.pptx" style="color:inherit;">
+        <img src="resrc/slides.png" alt="slides.png" class="text-center"
+             style="max-width:70%; border:0.15em solid;border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-0 col-lg-0"></div>
+  </div>
+    <h4 style="padding-top:0.5em">BibTeX</h4>
+    If you find this work useful for your research, please cite:
+    <div class="card">
+      <div class="card-block">
+        <pre class="card-text clickselect">
+
+        </pre>
+      </div>
+    </div> -->
+  
+  <!--
+  <h3>Further information</h3>
+  <hr/>
+  If you like this project, please check out other related works from our group:
+  <h4>Follow-ups</h4>
+  <ul>
+    <li>
+      <a href="https://arxiv.org/abs/2104.14575">Monnier et al. - Unsupervised Layered Image Decomposition into Object
+        Prototypes (arXiv 2021)</a>
+    </li>
+  </ul>
+
+  <h4>Previous works on deep transformations</h4>
+  <ul>
+    <li>
+      <a href="https://arxiv.org/abs/1908.04725">Deprelle et al. - Learning elementary structures for 3D shape
+        generation and matching (NeurIPS 2019)</a>
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/1806.05228">Groueix et al. - 3D-CODED: 3D Correspondences by Deep Deformation (ECCV
+        2018)</a>
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/1802.05384">Groueix et al. - AtlasNet: A Papier-Mache Approach to Learning 3D
+        Surface Generation (CVPR 2018)</a>
+    </li>
+  </ul>
+  -->
+
+  <h3>Acknowledgements</h3>
+  <hr/>
+  <p>
+    This work was funded by the Portuguese Foundation for Science and Technology (FCT) under the PhD grant "2022.11566.BD", 
+    and supported by NOVA LINCS (UIDB/04516/2020) with the financial support of FCT.IP.
+  </p>
+</div>
+
+<div class="container" style="padding-top:3rem; padding-bottom:3rem">
+  <p style="text-align:center">
+  &#169; This webpage was in part inspired from this
+  <a href="https://github.com/monniert/project-webpage">template</a>.
+  </p>
+</div>
+
+</body>
+</html>
