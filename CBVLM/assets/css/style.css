@@ -48,13 +48,13 @@ table {
 }
 
 .label-info {
-  background-color: #077583;
+  background-color: #363636;
   border-radius: 60px;
   padding: 8px 15px;
 }
 
 .label-info[href]:hover {
-  background-color: #51AFBC;
+  background-color: #6d6d6d;
 }
 
 @media only screen and (max-width: 768px) {
