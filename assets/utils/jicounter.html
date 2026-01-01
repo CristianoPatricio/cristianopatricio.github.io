@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Registo de Tempo - Jejum Intermitente</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🕒 Jejum Intermitente</h1>
+
+    <button class="btn btn-success" onclick="start()"><i class="bi bi-play-fill"></i> Start</button>
+    <button class="btn btn-danger" onclick="stop()"><i class="bi bi-stop-fill"></i> Stop</button>
+
+    <p id="status"></p>
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Início</th>
+                <th scope="col">Fim</th>
+                <th scope="col">Duração</th>
+            </tr>
+        </thead>
+        <tbody id="registos"></tbody>
+    </table>
+
+    <hr>
+
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-info" onclick="exportar()"><i class="bi bi-download"></i> Exportar JSON</button>
+        <button class="btn btn-warning" onclick="limpar()"><i class="bi bi-trash-fill"></i> Limpar tudo</button>
+    </div>
+
+    <hr>
+
+    <footer class="text-center mt-4">
+        <p class="mt-3 text-muted">&copy; 2026. Registo de Tempo - Jejum Intermitente.</p>
+    </footer>
+
+    <script>
+        let inicio = null;
+
+        function carregar() {
+            return JSON.parse(localStorage.getItem("registosTempo") || "[]");
+        }
+
+        function guardar(lista) {
+            localStorage.setItem("registosTempo", JSON.stringify(lista));
+        }
+
+        function atualizarTabela() {
+            const lista = carregar();
+            const tbody = document.getElementById("registos");
+            tbody.innerHTML = "";
+
+            lista.forEach(r => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+          <td>${r.inicio}</td>
+          <td>${r.fim}</td>
+          <td>${r.duracao}</td>
+        `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // ---------- START ----------
+        function start() {
+            inicio = new Date();
+
+            // guardar início no localStorage
+            localStorage.setItem("inicioAtivo", inicio.toISOString());
+
+            document.getElementById("status").textContent =
+                "Iniciado às " + inicio.toLocaleTimeString();
+        }
+
+        // ---------- STOP ----------
+        function stop() {
+            // recuperar caso tenha sido guardado
+            if (!inicio) {
+                const guardado = localStorage.getItem("inicioAtivo");
+                if (!guardado) {
+                    alert("Clica em START primeiro.");
+                    return;
+                }
+                inicio = new Date(guardado);
+            }
+
+            const fim = new Date();
+            const diffMs = fim - inicio;
+
+            const horas = Math.floor(diffMs / 3600000);
+            const minutos = Math.floor((diffMs % 3600000) / 60000);
+            const segundos = Math.floor((diffMs % 60000) / 1000);
+
+            const registo = {
+                inicio: inicio.toLocaleString(),
+                fim: fim.toLocaleString(),
+                duracao: `${horas}h ${minutos}m ${segundos}s`
+            };
+
+            const lista = carregar();
+            lista.push(registo);
+            guardar(lista);
+
+            // apagar o início guardado
+            localStorage.removeItem("inicioAtivo");
+            inicio = null;
+
+            document.getElementById("status").textContent = "Registo guardado!";
+            atualizarTabela();
+        }
+
+        // ---------- EXPORTAR ----------
+        function exportar() {
+            const dados = JSON.stringify(carregar(), null, 2);
+            const blob = new Blob([dados], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "registos_tempo.json";
+            a.click();
+        }
+
+        // ---------- AO ABRIR A PÁGINA ----------
+        (function restaurarInicio() {
+            const guardado = localStorage.getItem("inicioAtivo");
+            if (guardado) {
+                inicio = new Date(guardado);
+                document.getElementById("status").textContent =
+                    "Contagem em curso desde " + inicio.toLocaleTimeString();
+            }
+        })();
+
+        // ------------ LIMPAR LOCAL STORAGE ------------
+        function limpar() {
+            const resposta = confirm("Tens a certeza que queres eliminar todos os registos?");
+
+            if (!resposta) return;
+
+            // apaga os registos e o início ativo
+            localStorage.removeItem("registosTempo");
+            localStorage.removeItem("inicioAtivo");
+
+            inicio = null;
+
+            document.getElementById("status").textContent = "Todos os dados foram eliminados.";
+            atualizarTabela();
+        }
+
+
+        atualizarTabela();
+    </script>
+
+</body>
+
+</html>
