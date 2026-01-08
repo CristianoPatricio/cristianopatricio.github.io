@@ -166,8 +166,18 @@
             const guardado = localStorage.getItem("inicioAtivo");
             if (guardado) {
                 inicio = new Date(guardado);
-                document.getElementById("status").textContent =
-                    "Contagem em curso desde " + inicio.toLocaleTimeString();
+
+                const fim = new Date();
+                const diffMs = fim - inicio;
+
+                const horas = Math.floor(diffMs / 3600000);
+                const minutos = Math.floor((diffMs % 3600000) / 60000);
+                const segundos = Math.floor((diffMs % 60000) / 1000);
+
+                document.getElementById("status").innerHTML =
+                    '<i class="bi bi-info-circle"></i> <br> <b>Contagem em curso desde:</b>' + inicio.toLocaleTimeString() + "<br> <b>Tempo decorrido:</b> " + `${horas}h ${minutos}m ${segundos}s`;
+                
+                document.getElementById("status").className = "mt-3 alert alert-info";
             }
         })();
 
