@@ -23,13 +23,13 @@ jobs:
 
       - name: Build MkDocs
         run: |
-          cd mkdocs_project
-          mkdocs build --site-dir ../deucalion
+          cd deucalion
+          mkdocs build --site-dir ../Deucalion
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deucalion
-          destination_dir: deucalion # This puts it in /Deucalion/
+          publish_dir: ./Deucalion
+          destination_dir: Deucalion # This puts it in /Deucalion/
           keep_files: true           # CRITICAL: Prevents deleting your main index.html
