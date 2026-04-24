@@ -23,7 +23,6 @@ jobs:
 
       - name: Build MkDocs
         run: |
-          cd deucalion
           mkdocs build --site-dir ../Deucalion
 
       - name: Deploy to gh-pages
