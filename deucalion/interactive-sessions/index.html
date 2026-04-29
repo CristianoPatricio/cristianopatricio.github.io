@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Interactive Sessions - Deucalion User Guide - UBI</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Interactive Sessions";
+        var mkdocs_page_input_path = "interactive-sessions.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Deucalion User Guide - UBI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../running-jobs/">Running Jobs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../containers/">Containers</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Interactive Sessions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-launch-an-interactive-session">How to Launch an Interactive Session</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#verifying-your-access">Verifying Your Access</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Deucalion User Guide - UBI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Interactive Sessions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-an-interactive-session-for-debugging-testing">Creating an Interactive Session for Debugging &amp; Testing</h1>
+<p>Sometimes, submitting a batch script and waiting for the output isn't enough. If you need to debug your code in real-time—for example, using a <code>breakpoint()</code> in Python, you should use an Interactive Session.</p>
+<p>An interactive session grants you direct access to a compute node's terminal, allowing you to run commands and see results instantly, including direct access to the GPUs.</p>
+<h2 id="how-to-launch-an-interactive-session">How to Launch an Interactive Session</h2>
+<p>To request a node for 30 minutes on a 40GB NVIDIA A100 GPU partition, use the <code>srun</code> command with the <code>--pty bash</code> flag:</p>
+<pre><code class="language-bash">srun --time=00:30:00 --partition=normal-a100-40 --account=f2025hpcvlab00005ubig --gpus=1 --pty bash
+</code></pre>
+<p>Breaking Down the Command:</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--time=00:30:00</td>
+<td>Sets a 30-minute limit for your session</td>
+</tr>
+<tr>
+<td>--partition=...</td>
+<td>Specifies the hardware queue (in this case, the A100 GPUs)</td>
+</tr>
+<tr>
+<td>--account=...</td>
+<td>Assigns the resource usage to your specific project account</td>
+</tr>
+<tr>
+<td>--nodes=1</td>
+<td>Requests exactly one compute node</td>
+</tr>
+<tr>
+<td>--pty bash</td>
+<td>Opens an interactive bash terminal on the allocated node</td>
+</tr>
+</tbody>
+</table>
+<h3 id="verifying-your-access">Verifying Your Access</h3>
+<p>Once your session starts, your terminal prompt will change (e.g., from login to something like <code>gnx506</code>). To confirm that you have successfully landed on a GPU node and that the hardware is available, run:</p>
+<pre><code>nvidia-smi
+</code></pre>
+<p>If successful, you will see a status table showing the A100-40GB GPU details. You are now ready to run your interactive tests!</p>
+<blockquote>
+<p>Tip: Remember to type exit or press Ctrl+D to end your session once you're finished. This frees up the GPU for other researchers and saves your project's allocated hours.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../containers/" class="btn btn-neutral float-left" title="Containers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../containers/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

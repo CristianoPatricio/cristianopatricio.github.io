@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Containers - Deucalion User Guide - UBI</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Containers";
+        var mkdocs_page_input_path = "containers.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Deucalion User Guide - UBI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../running-jobs/">Running Jobs</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Containers</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#singularity-containers">Singularity Containers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-pandora-module">Using pandora module</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-create-a-singularity-container-in-deucalion">How to create a singularity container in Deucalion?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-specify-the-container-in-the-slurm-file">How to specify the container in the SLURM file?</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../interactive-sessions/">Interactive Sessions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Deucalion User Guide - UBI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Containers</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="containers">Containers</h1>
+<p>Containerization is a lightweight form of virtualization that allows software applications to run in isolated environments. Unlike traditional virtual machines (VMs), containers share the host system's operating system kernel but keep the application and its dependencies separate. This approach reduces overhead, improves performance, and ensures consistency across different computing environments. Containers are especially useful in complex software deployments, as they guarantee that an application will run the same way, regardless of the underlying infrastructure—whether on a developer's laptop, a data center, or a high-performance computing (HPC) cluster.</p>
+<p>Popular container platforms include Docker, Kubernetes, and <strong>Singularity</strong>, each with its specific use cases and optimizations for different environments. In Deucalion, <strong>Singularity</strong> is provided in all three partitions (ARM, x86 and GPU).</p>
+<h2 id="singularity-containers">Singularity Containers</h2>
+<p>Singularity is a container platform designed specifically for high-performance computing (HPC) environments. It was created to address the unique security, performance, and flexibility needs of scientific computing. Singularity focuses on enabling users to package their applications and dependencies into portable containers that can be executed seamlessly on HPC infrastructure.</p>
+<h3 id="using-pandora-module">Using <code>pandora</code> module</h3>
+<p>This module facilitates the creation of singularity containers for Python from <code>requirements.txt</code> or Conda <code>env.yml</code>.</p>
+<p>📝 <strong><em>Note</em></strong>: The following commands must be run into the <strong>login node</strong>.</p>
+<pre><code class="language-bash"># View module documentation
+pandora build pip --help
+
+# Create a container named 'test' from 'requirements.txt' file in x86 architecture
+pandora build pip -n test -r requirements.txt -a x86
+
+# The above command will generate a file named test-x86_64.sif. To test the container, run:
+singularity shell test-x86_64.sif
+</code></pre>
+<h3 id="how-to-create-a-singularity-container-in-deucalion">How to create a singularity container in Deucalion?</h3>
+<p>It is common that some existing implementation or model has its own requirements in terms of package versioning, tipically detailed into a <code>requirements.txt</code> or <code>conda.yml</code>files.</p>
+<p>To create a singularity container, you must create an interactive session in the desired architecture (e.g., ARM or x86). For example, to create an interactive session in a x86, run the following command:</p>
+<pre><code class="language-bash">salloc -p dev-x86 -A f202511710cpcaa1x -t 1:00:00
+</code></pre>
+<p>where <code>-p</code> indicates the partition, <code>-A</code> the billing account, and <code>-t</code> the time for the session.</p>
+<p>Once in the interactive session, you should create a definition file <code>.def</code> and the <code>requirements.txt</code>.</p>
+<p>📝 <strong><em>Note</em></strong>: The build of the container must be done either on <code>/home</code> or <code>/tmp</code> folder, which means that the above files must be stored in these directories.</p>
+<p>Example of a definition file (<code>test.def</code>):</p>
+<pre><code class="language-bash">Bootstrap: docker
+From: python:3.10
+Stage: build
+
+%environment
+   export LC_ALL=C
+
+%post
+  pip install --upgrade pip
+  pip install torch==2.9.0 torchvision==0.24.0 torchaudio==2.9.0 --index-url https://download.pytorch.org/whl/cu126
+  pip install -r /tmp/requirements.txt
+
+%test
+  python -V
+</code></pre>
+<p>The content of <code>requirements.txt</code> file:</p>
+<pre><code class="language-text">numpy
+scipy
+</code></pre>
+<p>The generated <code>.sif</code> file should me moved to the <code>/projects</code> folder in order to save space in <code>/home</code> directory.</p>
+<p>To create the singularity container, run:</p>
+<pre><code class="language-bash">singularity build --fakeroot test.sif test.def
+</code></pre>
+<p>where <code>test.sif</code> is the name you want to give to the container and <code>test.def</code> is the definitions file.</p>
+<p>📝 <strong><em>Note</em></strong>: If you got the following error message after executing the above command: <code>FATAL: could not use fake root: no valid mapping entry found for &lt;username&gt;</code>, you must contact the Deucalion support.</p>
+<p>Do not forget to exit (type <code>exit</code>) the session node before going to the next step.</p>
+<p>To test the created container in a GPU interactive session, run:</p>
+<pre><code class="language-bash"># Enter a GPU (dev-a100-80) interactive session
+salloc -p dev-a100-80 -A f202511710cpcaa1g -t 1:00:00 --gpus 1
+
+# Test the container. It should output 'True' if GPU is detected
+singularity exec --nv test.sif python -c &quot;import torch; print(torch.cuda.is_available())&quot;
+</code></pre>
+<h3 id="how-to-specify-the-container-in-the-slurm-file">How to specify the container in the SLURM file?</h3>
+<pre><code class="language-bash">#!/bin/bash
+#SBATCH --job-name=hello_gpu
+#SBATCH --account=accountID
+#SBATCH --partition normal-a100-40
+#SBATCH --time=4:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=32
+#SBATCH --output=hello_gpu.out
+#SBATCH --error=hello_gpu.err
+
+singularity exec --nv --bind /projects:/projects test.sif python hello_gpu.py
+</code></pre>
+<p>You need to use the <code>--bind</code> (or -B) flag to mount the <code>/projects</code> directory so the container can access it.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../running-jobs/" class="btn btn-neutral float-left" title="Running Jobs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../interactive-sessions/" class="btn btn-neutral float-right" title="Interactive Sessions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../running-jobs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../interactive-sessions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

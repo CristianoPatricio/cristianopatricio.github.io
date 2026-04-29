@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Running Jobs - Deucalion User Guide - UBI</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Running Jobs";
+        var mkdocs_page_input_path = "running-jobs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Deucalion User Guide - UBI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Running Jobs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#user-storage">User storage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#partitions-on-deucalion">Partitions on Deucalion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#slurm-basics">Slurm Basics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-a-batch-script">Creating a batch script</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#as-an-example-lets-look-at-this-simple-batch-job-script-cpu">As an example, let's look at this simple batch job script (CPU).</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#now-lets-look-at-the-following-simple-batch-job-script-for-gpu">Now, let's look at the following simple batch job script for GPU</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../containers/">Containers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../interactive-sessions/">Interactive Sessions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Deucalion User Guide - UBI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Running Jobs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="overview">Overview</h1>
+<h2 id="user-storage">User storage</h2>
+<p>The users have a quota of 25GB and 20000 files in their <code>/home</code> directory, they are NOT allowed to use more storage.</p>
+<p>The users MUST run jobs only in <code>/projects/$project</code>, <code>$project</code> represents the project respective name.</p>
+<blockquote>
+<p><strong>Tip</strong> 💡 Create a folder with yout username inside the <code>/projects/$project</code> directory. Run the command <code>quotaprojects</code> to see the ID of the project.</p>
+</blockquote>
+<h2 id="partitions-on-deucalion">Partitions on Deucalion</h2>
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Architecture</th>
+<th>Max Nodes</th>
+<th>Time Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dev-arm</td>
+<td>aarch64</td>
+<td>2</td>
+<td>4 hours</td>
+</tr>
+<tr>
+<td>normal-arm</td>
+<td>aarch64</td>
+<td>128</td>
+<td>48 hours</td>
+</tr>
+<tr>
+<td>large-arm</td>
+<td>aarch64</td>
+<td>512</td>
+<td>72 hours</td>
+</tr>
+<tr>
+<td>dev-a100-40</td>
+<td>x86_64</td>
+<td>1</td>
+<td>4 hours</td>
+</tr>
+<tr>
+<td>normal-a100-40</td>
+<td>x86_64</td>
+<td>4</td>
+<td>48 hours</td>
+</tr>
+<tr>
+<td>dev-a100-80</td>
+<td>x86_64</td>
+<td>1</td>
+<td>4 hours</td>
+</tr>
+<tr>
+<td>normal-a100-80</td>
+<td>x86_64</td>
+<td>4</td>
+<td>48 hours</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slurm-basics">Slurm Basics</h2>
+<p>Think of an HPC cluster as a powerhouse made of many compute nodes. Each node is packed with processors and memory, and in the case of GPU nodes, GPUs.</p>
+<p>To use these resources, you’ll work with a Resource Manager. Instead of running programs directly, you submit a job. A job is essentially a "to-do list" that tells the system exactly which resources you need and how to run your code.</p>
+<p>On Deucalion, we use Slurm to handle all the scheduling and resource management.</p>
+<p>If you haven't used Slurm before, don’t worry! We’ll walk you through the basics so you can get your research moving.</p>
+<p>If you want to practice without any stakes, we highly recommend the interactive <a href="http://slurmlearning.deic.dk/">Slurm Learning tutorial</a>. It’s a great sandbox for getting comfortable before you submit your first real job.</p>
+<p>The main commands for using Slurm are summarized below.</p>
+<ul>
+<li><code>sinfo</code>  - view information about nodes and partitions</li>
+<li><code>squeue -u &lt;user&gt;</code>  - view information about <em>jobs</em> in the sheduling queue submit by <user></li>
+<li><code>scancel &lt;jobid&gt;</code> - cancel jobs with ID <jobid></li>
+<li><code>sbatch</code> - submit a batch script</li>
+<li><code>srun</code> - submit a job for execution in real time</li>
+</ul>
+<h3 id="creating-a-batch-script">Creating a batch script</h3>
+<p>The most common type of jobs are batch jobs which are submitted to the scheduler using a batch job script and the sbatch command.</p>
+<p>A batch job script is a text file containing information about the job to be run: the amount of computing resource and the tasks that must be executed.</p>
+<p>A batch script is summarized by the following steps:</p>
+<ul>
+<li>the interpreter to use for the execution of the script: bash, python, ...</li>
+<li>directives that define the job options: resources, run time, ...</li>
+<li>setting up the environment: prepare input, environment variables, ...</li>
+<li>run the application(s)</li>
+</ul>
+<h4 id="as-an-example-lets-look-at-this-simple-batch-job-script-cpu">As an example, let's look at this simple batch job script (CPU).</h4>
+<ol>
+<li>The Python Script (hello.py)</li>
+</ol>
+<p>Create a simple file named <code>hello.py</code>:</p>
+<pre><code class="language-python">print(&quot;Hello from the Deucalion compute node!&quot;)
+</code></pre>
+<ol>
+<li>The Slurm Batch Script (<code>submit_hello.sh</code>)</li>
+</ol>
+<p>This is the "job" description that tells Slurm what resources you need.</p>
+<pre><code class="language-bash">#!/bin/bash
+#SBATCH --job-name=hello_python
+#SBATCH --account=f2025hpcvlab00005ubia
+#SBATCH --partition=normal-arm
+#SBATCH --time=02:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=2G
+#SBATCH --output=hello_python.out
+#SBATCH --error=hello_python.err
+
+# Load the Python module
+module load Python
+
+# Run the script
+python hello.py
+</code></pre>
+<p>In the previous example, the first line <code>#!/bin/bash</code> specifies that the script should be interpreted as a bash script.</p>
+<p>The lines starting with <code>#SBATCH</code> are directives for the workload manager. These have the general syntax:</p>
+<pre><code class="language-bash">#SBATCH option_name=argument
+</code></pre>
+<p>The <code>#SBATCH --account=f2025hpcvlab00005ubia</code> is the billed account which you can check by running the command <code>billing</code>. The "a" in the final of the string means CPU account whereas "g" means GPU account. </p>
+<p>For selecting the partition <code>#SBATCH --partition=normal-arm</code>, you must check if you want to run the job either on CPU or GPU.</p>
+<p>The <code>#SBATCH --output=hello_python.out</code> will contain the output of job execution, in this case "Hello from the Deucalion compute node!". If any error occurs during job execution, the output will be written in <code>hello_python.err</code>.</p>
+<ol>
+<li>To run the job</li>
+</ol>
+<pre><code class="language-bash">sbatch submit_hello.sh
+</code></pre>
+<ol>
+<li>To check the status</li>
+</ol>
+<pre><code class="language-bash">squeue -u &lt;user&gt;
+</code></pre>
+<h4 id="now-lets-look-at-the-following-simple-batch-job-script-for-gpu">Now, let's look at the following simple batch job script for GPU</h4>
+<blockquote>
+<p>You should see first the section <a href="../containers/">Containers</a>.</p>
+</blockquote>
+<ol>
+<li>The Python Script (hello_gpu.py)</li>
+</ol>
+<p>Create a simple file named <code>hello_gpu.py</code>:</p>
+<pre><code class="language-python">import torch
+
+if torch.cuda.is_available():
+    device = torch.device(&quot;cuda&quot;)
+    print(f&quot;Using GPU: {torch.cuda.get_device_name(device)}&quot;)
+</code></pre>
+<ol>
+<li>The Slurm Batch Script (<code>submit_hello_gpu.sh</code>)</li>
+</ol>
+<pre><code class="language-bash">#!/bin/bash
+#SBATCH --job-name=hello_gpu
+#SBATCH --account=f202511710cpcaa1g
+#SBATCH --partition normal-a100-40
+#SBATCH --time=4:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=32
+#SBATCH --output=hello_gpu.out
+#SBATCH --error=hello_gpu.err
+
+module load singularity
+
+singularity exec --nv test.sif python hello_gpu.py
+</code></pre>
+<ol>
+<li>To run the job</li>
+</ol>
+<pre><code class="language-bash">sbatch submit_hello.sh
+</code></pre>
+<ol>
+<li>To check the status</li>
+</ol>
+<pre><code class="language-bash">squeue -u &lt;user&gt;
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../getting-started/" class="btn btn-neutral float-left" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../containers/" class="btn btn-neutral float-right" title="Containers">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../getting-started/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../containers/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
