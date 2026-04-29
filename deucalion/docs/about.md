@@ -1,5 +1,0 @@
-# About
-
-## Contributors
-
-- Cristiano Patrício
