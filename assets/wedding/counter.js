@@ -38,6 +38,6 @@ runTransaction(db, async (transaction) => {
         visitors
     });
 
-    counterElement.textContent = visitors;
+    counterElement.innerHTML = `<i class="bi bi-eye"></i> ${visitors}`;
 
 });
