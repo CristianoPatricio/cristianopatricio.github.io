@@ -24,7 +24,7 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
-const counterRef = doc(db, "website", "stats");
+const counterRef = doc(db, "wedding-stats", "website-stats");
 
 const counterElement = document.getElementById("visitor-count");
 
