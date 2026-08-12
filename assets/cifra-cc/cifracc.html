@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cifra CC</title>
+        <meta charset="utf-8">
+        <!--Responsive-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="width" name="MobileOptimized">
+        <meta content="true" name="HandheldFriendly">
+        <script src="./clipboard.js-master/dist/clipboard.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+    <style>
+        #title {
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(204, 201, 201);
+            font-family: "Courier New", Courier, monospace;
+            margin: 1vw;
+        }
+
+        .fa-heart {
+            color: rgb(240, 53, 53);
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div id="title">
+            <h1><b>Cifra CC</b></h1>
+        </div>
+        <div id="form1">
+            <span style="font-size: 1.5em;">Message:</span>
+            <br>
+            <textarea id="inputClearText" type="text" class="form-control" name="clearText" rows="10" cols="50" maxlength="9000" placeholder="Enter you message here..."></textarea>
+            <br>
+            <button id="btnEncrypt" type="button" class="btn btn-success"><i class="fas fa-lock"></i> Encrypt</button>
+            <button id="btnDecrypt" type="button" class="btn btn-warning"><i class="fas fa-unlock"></i> Decrypt</button>
+            <button id="btnClear" type="button" class="btn btn-primary"><i class="fas fa-eraser"></i> Clear</button>
+        </div>
+        <br><br>
+        <div id="form2">
+            <span style="font-size: 1.5em;">Encrypted Message:</span>
+            <br>
+            <textarea id="inputEncryptText" class="form-control" type="text" rows="10" cols="50" readonly></textarea>
+            <br>
+            <button class="btn btn-info" data-clipboard-target="#inputEncryptText"><i class="fas fa-copy"></i> Copy</button>
+            <button id="btnEncryptClear" type="button" class="btn btn-primary"><i class="fas fa-eraser"></i> Clear</button>
+        </div>
+        <br>
+        <hr>
+        <footer>
+            <p>Developed with <i class="fas fa-heart"></i> by Cristiano Patrício © 2019 | Last modified: 15-jul-2019 15:38</p>
+        </footer>
+    </body>
+    <script>
+
+        var clipboard = new ClipboardJS('.btn');
+        
+        var $btnEncrypt = document.querySelector("#btnEncrypt");
+        var $btnCopy = document.querySelector("#btnCopy");
+        var $btnDecrypt = document.querySelector("#btnDecrypt");
+        var $btnClear = document.querySelector("#btnClear");
+        var $btnEncryptClear = document.querySelector("#btnEncryptClear");
+
+        $btnEncrypt.addEventListener('click', function() {
+
+           if (document.querySelector("#inputClearText").value === "") {
+                alert("Escreva uma mensagem!");
+                return;
+            }
+
+            var $clearText = document.querySelector("#inputClearText").value;
+            var arrayEncryptText = new Array();
+
+            for (var i=0; i < $clearText.length; i++) {
+                arrayEncryptText.push($clearText[i].charCodeAt(0)+5);
+            }
+
+            var $divEncryptText = document.querySelector("#inputEncryptText");
+            var arrayEncryptTextToString = new Array();
+
+            arrayEncryptText.forEach(element => {
+                arrayEncryptTextToString.push(String.fromCharCode(element));
+            });
+            
+            $divEncryptText.textContent = arrayEncryptTextToString.join('').toString();
+        });
+
+        $btnDecrypt.addEventListener("click", function() {
+            if (document.querySelector("#inputClearText").value === "") {
+                alert("Escreva uma mensagem!");
+                return;
+            }
+
+            var $clearText = document.querySelector("#inputClearText").value;
+            var arrayEncryptText = new Array();
+
+            for (var i=0; i < $clearText.length; i++) {
+                arrayEncryptText.push($clearText[i].charCodeAt(0)-5);
+            }
+
+            var $divEncryptText = document.querySelector("#inputEncryptText");
+            var arrayEncryptTextToString = new Array();
+
+            arrayEncryptText.forEach(element => {
+                arrayEncryptTextToString.push(String.fromCharCode(element));
+            });
+            
+            $divEncryptText.textContent = arrayEncryptTextToString.join('').toString();
+        });
+
+        //$btnCopy.addEventListener("click", copyToClipboard);
+
+        $btnClear.addEventListener("click", function() {
+            document.querySelector("#inputClearText").value = "";
+        });
+
+        $btnEncryptClear.addEventListener("click", function() {
+            document.querySelector("#inputEncryptText").value = "";
+        });
+
+        function copyToClipboard() {
+            var copyText = document.querySelector("#inputEncryptText");
+            copyText.select();
+            document.execCommand("copy");
+        }
+
+        function pasteFromClipboard() {
+            
+        }
+
+    </script>
+</html>
